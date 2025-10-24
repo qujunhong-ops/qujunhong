@@ -7,7 +7,6 @@ int main()
 {
 
     float temperature = 0;
-
     printf("请输入摄氏度：");
     scanf("%f",&temperature);
 
