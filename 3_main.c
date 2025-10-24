@@ -1,32 +1,47 @@
 //202510304205
 //2179272405@qq.com
 //屈军宏
-#include<stdio.h>
+#include<stdio.h>;
 
 int main()
 {
-    int grade;
+    int a,b;
+    float result;
+    char operator;
+    
+    printf("请依次输入第一个数字，第二个数字，运算符号：");
+    scanf("%d %d %c",&a,&b,&operator);
 
-    printf("请输入学生成绩：");
-    scanf("%d",&grade);
+    switch (operator)
+    {
+    case '-': 
+    result = a - b;
+        break;
 
-if (grade > 100 || grade < 0){
-    printf("请输入正确的成绩");
-}
-else if(grade >= 90 )
-{
-    printf("A");
-}
-else if (grade >= 80 ){
-    printf("B");
-}
-else if(grade >= 70 ){
-    printf("C");
-}
-else if(grade >= 60 ){
-    printf("D");
-}else if(grade >= 0 ){
-    printf("E");
-}
+    case '+':
+    result = a + b;
+    break;
+
+    case '*':
+    result = a * b;
+    break;
+
+    case '/':
+    if(b==0){
+        printf("除数不能为0\n");
+        return 1;
+
+    }else{
+        result = (float)a / b;
+    }
+    break;
+
+    default:
+    printf("错误！无效运算符\n");
+    return 1;
+        break;
+    }
+    printf("%d %c %d = %.2f",a,operator,b,result);
 return 0;
-} 
+
+}
