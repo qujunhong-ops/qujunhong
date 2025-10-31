@@ -1,47 +1,38 @@
 //202510304205
 //2179272405@qq.com
 //屈军宏
-#include<stdio.h>;
+#include<stdio.h>
 
 int main()
 {
-    int a,b;
-    float result;
-    char operator;
-    
-    printf("请依次输入第一个数字，第二个数字，运算符号：");
-    scanf("%d %d %c",&a,&b,&operator);
-
-    switch (operator)
+    int num;
+    int i = 3;
+    printf("请输入一个50以内的正整数");
+    scanf("%d",&num);
+    if (num <= 1)
     {
-    case '-': 
-    result = a - b;
-        break;
-
-    case '+':
-    result = a + b;
-    break;
-
-    case '*':
-    result = a * b;
-    break;
-
-    case '/':
-    if(b==0){
-        printf("除数不能为0\n");
+        printf("密钥不安全，请重新输入");
         return 1;
-
+    }
+    if (num == 2)
+    {
+        printf("密钥安全，密码设置成功");
+        return 1;
+    }
+    while ( i < 50)
+    {
+        if(num % i == 0)
+        {
+            break;
+        }
+        i++;
+    }
+    if(i == num){
+        printf("密钥安全，密码设置成功");
+        return 1;
     }else{
-        result = (float)a / b;
+        printf("密钥不安全，请重新输入");
+        return 1;
     }
-    break;
-
-    default:
-    printf("错误！无效运算符\n");
-    return 1;
-        break;
-    }
-    printf("%d %c %d = %.2f",a,operator,b,result);
-return 0;
-
+    return 0;
 }
