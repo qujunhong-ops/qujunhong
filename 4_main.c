@@ -1,22 +1,25 @@
 //202510304205
 //2179272405@qq.com
 //屈军宏
+#include<stdio.h>
 
-#include<stdio.h>;
 int main()
 {
-    int a;
-    int b;
-    int c;
-
-    printf("请输入三角形的边长：");
-    scanf("%d %d %d",&a,&b,&c);
-    if (a + b > c && a + c > b && b + c > a)
+    int i,j,k;
+    int num = 100;
+    char separator;
+    while (num < 500)
     {
-        printf("可以组成三角形");
-    }else{
-        printf("不能组成三角形");
-
+        i = num / 100;
+        j = (num % 100)/10;
+        k = num % 10;
+    
+    if(num == i*i*i + j*j*j + k*k*k)
+    {
+        printf("%c%d",separator,num);
+         separator =' ';
     }
-    return 0;
+    num++;
+    }
+return 0;
 }
