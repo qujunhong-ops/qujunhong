@@ -2,6 +2,7 @@
 //2179272405@qq.com
 //屈军宏
 #include<stdio.h>
+
 int main()
 {
     int i,j,k;
