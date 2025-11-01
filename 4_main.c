@@ -8,7 +8,7 @@ int main()
     int i,j,k;
     int num = 100;
     char separator;
-    while (num < 500)
+    while (num < 1000)
     {
         i = num / 100;
         j = (num % 100)/10;
