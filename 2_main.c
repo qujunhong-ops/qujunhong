@@ -7,7 +7,7 @@ int main()
 {
     int i,j,k;
     int num;
-    char separator;
+    char[] separator;
     for ( num = 100; num < 1000; num += 1)
     {
         i = num / 100;
@@ -16,7 +16,7 @@ int main()
     
     if(num == i*i*i + j*j*j + k*k*k)
     {
-        printf("%c%d",separator,num);
+        printf("%s%d",separator,num);
          separator =" ";
     }
     }
