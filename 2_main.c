@@ -7,7 +7,7 @@ int main()
     int i,j,k;
     int num;
     char separator;
-    for ( num = 100; num < 500; num += 1)
+    for ( num = 100; num < 1000; num += 1)
     {
         i = num / 100;
         j = (num % 100)/10;
