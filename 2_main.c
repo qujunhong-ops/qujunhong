@@ -17,7 +17,7 @@ int main()
     if(num == i*i*i + j*j*j + k*k*k)
     {
         printf("%c%d",separator,num);
-         separator =“ ”;
+         separator =" ";
     }
     }
 return 0;
