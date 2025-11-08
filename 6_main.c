@@ -2,27 +2,32 @@
 //2179272405@qq.com
 //屈军宏
 #include<stdio.h>
-int main()
+int array(int arr[],int k)
 {
-    int arr[5],a,j;
-    char space;
-    while ( j < 5)
+    int sum = 0;
+    for (int i = 0; i < k; i++)
     {
-        scanf("%d",&a);
-        if (a %2 == 0)
-        {
-            arr[j] = a;
-            j++;
-        }
-        
-    }if (j == 5)
-    {
-        for (int num = 0; num < 5; num++)
-    {
-        printf("%C%d",space,arr[num]);
-        space = ' ';
+        sum +=arr[i];
     }
-    
+    return sum;
+}
+int productarray(int arr[],int k)
+{
+    int product = 1;
+    for (int i = 0; i < k; i++)
+    {
+        product *= arr[i];
     }
+    return product;
+}int main()
+{
+    int arr[5];
+    for (int i = 0; i < 5; i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    int sum = array(arr,5);
+    int  product = productarray(arr,5);
+    printf("%d %d",sum,product);
     return 0;
 }
