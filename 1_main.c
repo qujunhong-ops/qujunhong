@@ -2,35 +2,32 @@
 //2179272405@qq.com
 //屈军宏
 #include<stdio.h>
-
 int main()
 {
-    int num;
-    int i;
-    printf("请输入一个50以内的正整数");
-    scanf("%d",&num);
-    if (num <= 1)
+    int arr[3][3];
+    for (int i = 0; i < 3; i++)
     {
-        printf("密钥不安全，请重新输入");
-        return 1;
-    }
-    if (num == 2)
-    {
-        printf("密钥安全，密码设置成功");
-        return 1;
-    }
-    for ( i = 3; i < 50; i += 1)
-    {
-        if(num % i == 0){
-            break;
+        for (int j = 0; j < 3; j++)
+        {
+            scanf("%d",&arr[i][j]);
         }
+        
     }
-    if(i == num){
-        printf("密钥安全，密码设置成功");
-        return 1;
-    }else{
-        printf("密钥不安全，请重新输入");
-        return 1;
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            if (j > 0)
+            {
+                printf(" %d",arr[i][j]);
+            }
+            else if (j == 0)
+            {
+                printf("%d",arr[i][j]);
+            }
+            
+        }
+        printf("\n");
     }
     return 0;
 }
