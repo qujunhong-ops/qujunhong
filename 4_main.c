@@ -2,23 +2,22 @@
 //2179272405@qq.com
 //屈军宏
 #include<stdio.h>
+int power(int a,int b)
+{
+    int result = 1;
+    for (int i = 0; i < b; i++)
+    {
+    result *= a;
+    }
+    return result;
+}
 int main()
 {
-    int i,j,k;
-    int num = 100;
-    char separator;
-    while (num < 1000)
+    int num = 0;
+    for (int i = 1; i <= 5; i++)
     {
-        i = num / 100;
-        j = (num % 100)/10;
-        k = num % 10;
-    
-    if(num == i*i*i + j*j*j + k*k*k)
-    {
-        printf("%c%d",separator,num);
-         separator =' ';
+        num += power(i,2);
     }
-    num++;
-    }
-return 0;
+    printf("%d",num);
+    return 0;
 }
