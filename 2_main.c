@@ -2,23 +2,31 @@
 //2179272405@qq.com
 //屈军宏
 #include<stdio.h>
-
 int main()
 {
-    int i,j,k;
-    int num;
-    char[] separator;
-    for ( num = 100; num < 1000; num += 1)
+    int arr[3][3];
+    for (int i = 0; i < 3; i++)
     {
-        i = num / 100;
-        j = (num % 100)/10;
-        k = num % 10;
-    
-    if(num == i*i*i + j*j*j + k*k*k)
+        for(int j = 0; j < 3; j++)
+        {
+            scanf("%d",&arr[i][j]);
+        }
+        
+    }
+    for (int i = 0; i < 3; i++)
     {
-        printf("%s%d",separator,num);
-         separator =" ";
+        for (int j = 0; j < 3; j++)
+        {
+            if (j == 0)
+            {
+                printf("%d",arr[j][i]);
+            }
+            if(j > 0)
+            {
+                printf(" %d",arr[j][i]);
+            }
+        }
+        printf("\n");
     }
-    }
-return 0;
+    return 0;
 }
