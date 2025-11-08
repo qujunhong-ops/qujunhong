@@ -2,23 +2,32 @@
 //2179272405@qq.com
 //屈军宏
 #include<stdio.h>
+int reverse(int arr[],int l)
+{
+    for (int i = 0; i < l/2; i++)
+    {
+        int temp = arr[i];
+        arr[i] = arr[l - 1 - i];
+        arr[l - 1 - i] = temp;
+    }
+    
+}
 int main()
 {
-    int arr[5] ={0,0,0,0,0};
-    char space;
-    for (int i = 0; i < 4; i++)
+    int arr[5];
+    for (int i = 0; i < 5; i++)
     {
         scanf("%d",&arr[i]);
     }
-    for (int j = 4; j > 0; j--)
-    {
-        arr[j] = arr[j-1];
+    reverse(arr,5);
+    for (int i = 0; i < 5; i++)
+    {if(i == 0){
+        printf("%d",arr[i]);
     }
-    arr[0] = 0;
-    for (int k = 0; k < 5; k++)
+    if (i > 0)
     {
-        printf("%c%d",space,arr[k]);
-        space =' ';
+        printf(" %d",arr[i]);
+    }
     }
     return 0;
 }
