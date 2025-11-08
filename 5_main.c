@@ -2,26 +2,14 @@
 //2179272405@qq.com
 //屈军宏
 #include<stdio.h>
+int sequence(int a1,int an,int step)
+{
+    int num = (an - a1)/step + 1;
+    return num*(a1 + an)/2;
+}
 int main()
 {
-    int i;
-    int j;
-    int arr[5] = {};
-    char space ;
-    for ( i = 0; i < 4; i++)
-    {
-        scanf("%d",&arr[i]);
-    }
-    for (int k = 0; k <= 3; k++)
-    {
-        j += arr[k];
-    }
-    arr[4] = j;
-    for (int num = 0; num < 5; num++)
-    {
-        printf("%c%d",space,arr[num]);
-        space =' ';
-    }
+    int total = sequence(1,100,1);
+    printf("%d",total);
     return 0;
-
 }
